@@ -1,23 +1,33 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
-
-.header {
-  padding: 60px 0;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .button {
   background-color: $accent;
   border-radius: 5px;
   border: 2px solid transparent;
   color: $white;
+  transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+
+  &:focus {
+    background-color: $focus;
+    border-color: $focus-2;
+    color: $accent;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $accent;
+    border-color: $focus-2;
+  }
+
+  &:active {
+    border-color: transparent;
+    color: $accent;
+    background-color: $active;
+  }
 }
 
 .input {
@@ -25,6 +35,66 @@
   background-color: $white;
   border: 1px solid #C2C2C2;
   border-radius: 5px;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $accent;
+    border-color: transparent;
+  }
+
+  &::placeholder {
+    transition: color 0.5s;
+  }
+
+  &:hover::placeholder {
+    color: $title;
+  }
+}
+
+.link {
+  color: $title;
+  border-bottom: 1px solid $title;
+  transition: text-decoration 0.5s, background-color 0.5s, box-shadow 0.5s, color 0.5s, text-shadow 0.5s, border-bottom 0.5s;
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: transparent;
+    border-radius: 5px;
+    border-bottom: none;
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 0px 0px 2px $focus-2;
+  }
+
+  &:hover {
+    color: $accent;
+  }
+
+  &:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  }
+}
+
+.title {
+  @extend %rubik-500;
+  font-size: 36px;
+  line-height: 1.3;
+  color: $title;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .logo {
@@ -52,8 +122,20 @@
 .menu__link,
 .user-nav__link,
 .footer__link,
-.footer__link-contacts {
+.footer__link-contacts,
+.categories__btn {
   border-radius: 5px;
+}
+
+.header {
+  padding: 60px 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .menu {
@@ -168,18 +250,20 @@
 
 .search-form {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 5px;
-  padding: 10px 12px;
+  position: absolute;
+  right: 30px;
+  top: 50px;
   font-size: 14px;
   transform: translateY(-350%);
   transition: transform 1s;
 
+  &__label {
+    margin-right: 10px;
+  }
+
   &__input {
     width: 100%;
     max-width: 250px;
-    margin-right: 10px;
     padding: 11px 10px;
     transition: box-shadow 0.5s, border-color 0, 5s;
 
@@ -200,30 +284,171 @@
 
   &__btn {
     padding: 10px 22px;
-
-    &:focus {
-      background-color: $focus;
-      border-color: $focus-2;
-      color: $accent;
-    }
-
-    &:hover {
-      background-color: $white;
-      color: $accent;
-      border-color: $focus-2;
-    }
-
-    &:active {
-      border-color: transparent;
-      color: $accent;
-      background-color: $active;
-    }
   }
 
   &--active {
     transform: translateY(0);
   }
 }
+
+.delivery {
+  padding-bottom: 120px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    margin-right: 160px;
+  }
+
+  &__title {
+    @extend %rubik-500;
+    font-size: 66px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    display: block;
+    color: $accent;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    padding: 10px 30px;
+    font-size: 18px;
+    line-height: 1.3;
+    margin-right: 34px;
+  }
+
+  &__img {
+    max-width: 560px;
+    height: 660px;
+  }
+}
+
+.categories {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: 45px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 19px;
+  }
+
+  &__btn {
+    padding: 13px 30px;
+    line-height: 1.3;
+    color: $title;
+    background-color: $white;
+    box-shadow: 0px 0px 0px 1px $social;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px $focus-2;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 0px 2px $focus-2;
+      background-color: $focus;
+      color: $accent;
+    }
+
+    &:hover .categories__icon {
+      fill: $accent;
+    }
+
+    &:active {
+      background-color: $white;
+      box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
+      color: $title;
+    }
+
+    &:active .categories__icon {
+      fill: $title;
+    }
+
+    &.mixitup-control-active .categories__icon {
+      fill: $white;
+    }
+  }
+
+  &__icon {
+    fill: $title;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: fill 0.5s;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &__box {
+    padding: 20px 15px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    margin: 0 auto 10px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.2;
+    margin-bottom: 11px;
+  }
+
+  &__text-burger {
+    margin-bottom: 28px;
+  }
+
+  &__price {
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $title;
+    margin-bottom: 8px;
+  }
+
+  &__box-btn {
+    padding: 5px 14px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  &__link {
+    text-align: center;
+  }
+}
+
+.mixitup-control-active {
+  background-color: $accent;
+  color: $white;
+  padding: 15px 30px;
+}
+
 
 .footer {
   &__top {
@@ -249,23 +474,13 @@
     width: 100%;
     max-width: 200px;
     height: 44px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     transition: box-shadow 0.5s, border 0.5s;
-
-    &:focus {
-      box-shadow: 0px 0px 0px 2px $accent;
-      border-color: transparent;
-    }
 
     &::placeholder {
       font-size: 14px;
       color: $dop;
       opacity: 0.9;
-      transition: color 0.5s;
-    }
-
-    &:hover::placeholder {
-      color: $title;
     }
   }
 
@@ -277,29 +492,10 @@
   }
 
   &__btn {
-    padding: 13px 38px;
+    padding: 11px 38px;
     @extend %rubik-500;
     font-size: 14px;
     position: relative;
-    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
-
-    &:focus {
-      background-color: $focus;
-      border-color: $focus-2;
-      color: $accent;
-    }
-
-    &:hover {
-      background-color: $white;
-      color: $accent;
-      border-color: $focus-2;
-    }
-
-    &:active {
-      border-color: transparent;
-      color: $accent;
-      background-color: $active;
-    }
 
     &:focus .footer__icon-telegram,
     &:hover .footer__icon-telegram,
@@ -368,7 +564,6 @@
     transition: stroke 0.5s;
   }
 
-
   &__list-social {
     display: flex;
   }
@@ -424,9 +619,6 @@
     text-align: center;
   }
 }
-
-
-
 
 
 @import 'media'

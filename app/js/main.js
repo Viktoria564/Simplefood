@@ -1,4 +1,5 @@
 $(function() {
+  var mixer = mixitup('.categories__list');
 
   $('.menu').find('.menu__link').on('click', function () {
     if ($(this).hasClass('active')) {
