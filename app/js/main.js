@@ -9,7 +9,7 @@ $(function() {
     $(this).addClass('active');
   });
 
-  $('.user-nav__link-search').on('click', function () {
+  $('.user-nav__btn-search').on('click', function () {
     $('.search-form').toggleClass('search-form--active');
   });
   

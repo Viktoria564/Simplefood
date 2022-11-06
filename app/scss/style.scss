@@ -4,192 +4,56 @@
 @import 'libs';
 @import 'global';
 
-.button {
-  background-color: $accent;
-  border-radius: 5px;
-  border: 2px solid transparent;
-  color: $white;
-  transition: background-color 0.5s, border-color 0.5s, color 0.5s;
-
-  &:focus {
-    background-color: $focus;
-    border-color: $focus-2;
-    color: $accent;
-  }
-
-  &:hover {
-    background-color: $white;
-    color: $accent;
-    border-color: $focus-2;
-  }
-
-  &:active {
-    border-color: transparent;
-    color: $accent;
-    background-color: $active;
-  }
-}
-
-.input {
-  padding: 13px 15px;
-  background-color: $white;
-  border: 1px solid #C2C2C2;
-  border-radius: 5px;
-
-  &:focus {
-    box-shadow: 0px 0px 0px 2px $accent;
-    border-color: transparent;
-  }
-
-  &::placeholder {
-    transition: color 0.5s;
-  }
-
-  &:hover::placeholder {
-    color: $title;
-  }
-}
-
-.link {
-  color: $title;
-  border-bottom: 1px solid $title;
-  transition: text-decoration 0.5s, background-color 0.5s, box-shadow 0.5s, color 0.5s, text-shadow 0.5s, border-bottom 0.5s;
-
-  &:focus,
-  &:hover,
-  &:active {
-    text-decoration: transparent;
-    border-radius: 5px;
-    border-bottom: none;
-  }
-
-  &:focus {
-    background-color: rgba(255, 255, 255, 0.01);
-    box-shadow: 0px 0px 0px 2px $focus-2;
-  }
-
-  &:hover {
-    color: $accent;
-  }
-
-  &:active {
-    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-  }
-}
-
-.title {
-  @extend %rubik-500;
-  font-size: 36px;
-  line-height: 1.3;
-  color: $title;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.logo {
-  transition: background-color 0.5s, box-shadow 0.5s, opacity 0.5s;
-
-  &__img {
-    padding-top: 6px;
-  }
-
-  &:focus {
-    background-color: rgba(255, 255, 255, 0.01);
-    box-shadow: 0px 0px 0px 2px $focus-2;
-  }
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-.logo,
-.menu__link,
-.user-nav__link,
-.footer__link,
-.footer__link-contacts,
-.categories__btn {
-  border-radius: 5px;
-}
-
 .header {
-  padding: 60px 0;
+  padding-top: 60px;
 }
 
-.wrapper {
+.header__inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
 }
 
 .menu {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-right: 50px;
 
   &__list {
     display: flex;
   }
 
-  &__item {
-    padding: 0 45px 2px 0;
+  &__item:not(:last-child) {
+    margin-right: 45px;
   }
 
   &__link {
     font-size: 18px;
     line-height: 1.16;
-    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s, text-shadow 0.5s;
 
     &.active {
       color: $accent;
-    }
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0px 0px 0px 2px $focus-2;
-    }
-
-    &:hover {
-      color: $accent;
-    }
-
-    &:active {
-      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     }
   }
 }
 
 .user-nav {
   display: flex;
-  align-items: center;
 
-  &__item {
-    padding: 0 5px;
-  }
-
-  &__link {
+  &__btn {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
+    border-radius: 5px;
     position: relative;
     transition: background-color 0.5s, box-shadow 0.5s, background-image 0.5s;
+
+    &:nth-child(1) {
+      margin-right: 15px;
+    }
 
     &:focus {
       background-color: $focus;
@@ -261,27 +125,6 @@
     margin-right: 10px;
   }
 
-  &__input {
-    width: 100%;
-    max-width: 250px;
-    padding: 11px 10px;
-    transition: box-shadow 0.5s, border-color 0, 5s;
-
-    &::placeholder {
-      color: $dop;
-      transition: color 0.5s;
-    }
-
-    &:focus {
-      box-shadow: 0px 0px 0px 2px #FF6838;
-      border-color: transparent;
-    }
-
-    &:hover::placeholder {
-      color: $title;
-    }
-  }
-
   &__btn {
     padding: 10px 22px;
   }
@@ -291,20 +134,25 @@
   }
 }
 
-.delivery {
-  padding-bottom: 120px;
+.hero {
+  padding: 60px 0 123px;
 
   &__inner {
-    display: flex;
-    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    height: 68vh;
   }
 
   &__content {
-    margin-right: 160px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__title {
-    @extend %rubik-500;
+    font-weight: 500;
     font-size: 66px;
     line-height: 1.3;
     margin-bottom: 20px;
@@ -320,20 +168,14 @@
     margin-bottom: 20px;
   }
 
-  &__btn {
-    padding: 10px 30px;
-    font-size: 18px;
-    line-height: 1.3;
+  &__link {
     margin-right: 34px;
-  }
-
-  &__img {
-    max-width: 560px;
-    height: 660px;
+    display: inline-block;
   }
 }
 
 .categories {
+  padding-bottom: 120px;
   text-align: center;
 
   &__title {
@@ -355,6 +197,7 @@
     color: $title;
     background-color: $white;
     box-shadow: 0px 0px 0px 1px $social;
+    border-radius: 5px;
     transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
 
     &:focus {
@@ -396,10 +239,11 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-    margin-bottom: 60px;
+    grid-gap: 30px;
+    margin-bottom: 58px;
     text-align: center;
   }
+
 
   &__box {
     padding: 20px 15px;
@@ -408,13 +252,22 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
+
+    &:hover {
+      box-shadow: 0px 0px 0px 1px $accent;
+    }
   }
+}
+
+.product {
 
   &__img {
     margin: 0 auto 10px;
   }
 
   &__text {
+    font-weight: 400;
     font-size: 15px;
     line-height: 1.2;
     margin-bottom: 11px;
@@ -425,21 +278,12 @@
   }
 
   &__price {
-    @extend %rubik-500;
+    display: block;
+    font-weight: 500;
     font-size: 15px;
     line-height: 1.4;
     color: $title;
     margin-bottom: 8px;
-  }
-
-  &__box-btn {
-    padding: 5px 14px;
-    font-size: 14px;
-    line-height: 1.3;
-  }
-
-  &__link {
-    text-align: center;
   }
 }
 
@@ -466,47 +310,26 @@
   }
 
   &__logo {
+    padding-top: 6px;
     margin-bottom: 26px;
     display: inline-block;
   }
 
-  &__input {
-    width: 100%;
-    max-width: 200px;
-    height: 44px;
+  &__label {
     margin-bottom: 12px;
-    transition: box-shadow 0.5s, border 0.5s;
-
-    &::placeholder {
-      font-size: 14px;
-      color: $dop;
-      opacity: 0.9;
-    }
   }
 
-  &__icon-telegram {
-    margin-right: 11px;
-    vertical-align: middle;
-    fill: $white;
-    transition: fill 0.5s;
-  }
-
-  &__btn {
-    padding: 11px 38px;
-    @extend %rubik-500;
-    font-size: 14px;
-    position: relative;
-
-    &:focus .footer__icon-telegram,
-    &:hover .footer__icon-telegram,
-    &:active .footer__icon-telegram {
-      fill: #FF6838;
-    }
+  &__input {
+    max-width: 200px;
   }
 
   &__list {
-    max-width: 189px;
+    column-count: 3;
     margin-right: 73px;
+  }
+
+  &__item {
+    max-width: 187px;
   }
 
   &__item:not(:last-child) {
@@ -515,28 +338,20 @@
 
   &__link {
     font-size: 18px;
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0px 0px 0px 2px $focus-2;
-    }
-
-    &:hover {
-      color: $accent;
-    }
-
-    &:active {
-      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    }
   }
 
-  &__item-contacts {
+  &__list-contacts {
+    margin-bottom: 15px;
+  }
+
+  &__item-contacts:not(:last-child) {
     margin-bottom: 15px;
   }
 
   &__link-contacts {
     font-size: 16px;
     line-height: 2;
+    border-radius: 5px;
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.01);
