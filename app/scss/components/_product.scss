@@ -1,0 +1,26 @@
+.product {
+
+  &__img {
+    margin: 0 auto 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2;
+    margin-bottom: 11px;
+  }
+
+  &__text-burger {
+    margin-bottom: 28px;
+  }
+
+  &__price {
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $title;
+    margin-bottom: 8px;
+  }
+}
