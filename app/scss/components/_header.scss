@@ -45,8 +45,8 @@
     position: relative;
     transition: background-color 0.5s, box-shadow 0.5s, background-image 0.5s;
 
-    &:nth-child(1) {
-      margin-right: 15px;
+    & + .user-nav__btn {
+      margin-left: 15px;
     }
 
     &:focus {
@@ -56,28 +56,28 @@
 
     &:hover {
       background-color: $accent;
-    }
 
-    &:hover .user-nav__icon {
-      stroke: $white;
-    }
+      .user-nav__icon {
+        stroke: $white;
+      }
 
-    &:hover .user-nav__num {
-      color: $accent;
-      background-color: $white;
+      .user-nav__num {
+        color: $accent;
+        background-color: $white;
+      }
     }
 
     &:active {
       background-color: $focus;
-    }
 
-    &:active .user-nav__icon {
-      stroke: $title;
-    }
+      .user-nav__icon {
+        stroke: $title;
+      }
 
-    &:active .user-nav__num {
-      color: $white;
-      background-color: $accent;
+      .user-nav__num {
+        color: $white;
+        background-color: $accent;
+      }
     }
   }
 
@@ -112,15 +112,28 @@
   right: 30px;
   top: 50px;
   font-size: 14px;
-  transform: translateY(-350%);
+  transform: translateY(-400%);
   transition: transform 1s;
 
   &__label {
     margin-right: 10px;
+    display: block;
+    height: 44px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    padding: 13px 15px;
+    background-color: $white;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
   }
 
   &__btn {
     padding: 10px 22px;
+    font-size: 14px;
   }
 
   &--active {

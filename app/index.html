@@ -9,6 +9,7 @@
   <link type="Image/x-icon" href="images/icon-favicon.ico" rel="icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
   <header class="header">
@@ -46,11 +47,12 @@
             <span class="sr-only">Открыть корзину</span>
           </button>
           <form class="search-form">
-            <label class="search-form__label label">
+            <label class="search-form__label">
               <span class="sr-only">Введите название товара</span>
-              <input class="input" type="search" placeholder="Поиск..." name="search" required>
+              <input class="search-form__input input--interactive" type="search" placeholder="Поиск..." name="search"
+                required>
             </label>
-            <button class="search-form__btn button-mini" type="submit">
+            <button class="search-form__btn button" type="submit">
               Поиск
             </button>
           </form>
@@ -58,13 +60,13 @@
       </div>
     </div>
   </header>
-
+  
+  <h1 class="sr-only">Доставка еды - Симпл Фуд</h1>
   <main class="main">
     <section class="hero">
       <div class="container">
         <div class="hero__inner" style="background-image: url(images/guy-scooter.png);">
           <div class="hero__content">
-            <h1 class="sr-only">Симпл Фуд</h1>
             <h2 class="hero__title">
               Доставка
               <span class="hero__subtitle">за 15 минут</span>
@@ -73,7 +75,7 @@
               Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
             </p>
             <div class="hero__item">
-              <a class="hero__link link-order" href="#">Заказать</a>
+              <a class="hero__link button" href="#">Заказать</a>
               <a class="link-detail" href="#">Подробнее</a>
             </div>
           </div>
@@ -141,8 +143,8 @@
                   160
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-b">
@@ -156,8 +158,8 @@
                   190
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-b">
@@ -172,8 +174,8 @@
                   260
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-a">
@@ -188,8 +190,8 @@
                   199
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-c">
@@ -203,8 +205,8 @@
                   180
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-c">
@@ -219,8 +221,8 @@
                   160
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-c">
@@ -234,8 +236,8 @@
                   190
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-d">
@@ -250,8 +252,8 @@
                   260
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-d">
@@ -266,8 +268,8 @@
                   199
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
           <li class="categories__box mix category-d">
@@ -281,8 +283,8 @@
                   180
                   <span class="product__currency">грн.</span>
                 </span>
+                <button class="product__btn button" type="button">В корзину</button>
               </a>
-              <button class="button-mini" type="button">В корзину</button>
             </article>
           </li>
         </ul>
@@ -296,15 +298,16 @@
       <div class="footer__top">
         <div class="footer__top-item">
           <a class="logo footer__logo" href="#">
-            <img class="logo__img" src="images/logo.svg" alt="Логотип">
+            <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="39">
           </a>
           <form class="footer__form">
-            <label class="footer__label label">
+            <label class="footer__label">
               <span class="sr-only">Введите ваш имейл</span>
-              <input class="footer__input input" placeholder="Ваш email" type="email" name="email" required>
+              <input class="footer__input input--interactive" placeholder="Ваш email" type="email" name="email"
+                required>
             </label>
-            <button class="button-icon" type="submit">
-              <svg class="button-icon__svg" width="14" height="14">
+            <button class="button button--icon" type="submit">
+              <svg class="button--icon-svg" width="14" height="14">
                 <use id="icon-telegram" xlink:href="images/sprite.svg#icon-telegram"></use>
               </svg>
               Подписаться
@@ -350,57 +353,57 @@
             <a class="footer__link link" href="#">Карта сайтa</a>
           </li>
         </ul>
-        <div class="footer__top-item">
-          <ul class="footer__list-contacts">
-            <li class="footer__item-contacts">
-              <a class="footer__link-contacts" href="#">
-                <svg class="footer__icon" width="20" height="19">
-                  <use id="icon-local" xlink:href="images/sprite.svg#icon-local"></use>
-                </svg>
-                ул. Т.Г.Шевченко, 1</a>
-            </li>
-            <li class="footer__item-contacts">
-              <a class="footer__link-contacts" href="tel:380501112233">
-                <svg class="footer__icon" width="20" height="19">
-                  <use id="icon-tel" xlink:href="images/sprite.svg#icon-tel"></use>
-                </svg>
-                380501112233</a>
-            </li>
-            <li class="footer__item-contacts">
-              <a class="footer__link-contacts" href="mailto:support@sfood.com">
-                <svg class="footer__icon" width="20" height="19">
-                  <use id="icon-message" xlink:href="images/sprite.svg#icon-message"></use>
-                </svg>
-                support@sfood.com</a>
-            </li>
-          </ul>
-          <ul class="footer__list-social">
-            <li class="footer__item-social">
-              <a class="footer__link-social" href="#">
-                <svg class="footer__icon-social" width="21" height="20">
-                  <use id="icon-facebook" xlink:href="images/sprite.svg#icon-facebook"></use>
-                </svg>
-                <span class="sr-only">Открыть Фейсбук</span>
-              </a>
-            </li>
-            <li class="footer__item-social">
-              <a class="footer__link-social" href="#">
-                <svg class="footer__icon-social" width="21" height="20">
-                  <use id="icon-twitter" xlink:href="images/sprite.svg#icon-twitter"></use>
-                </svg>
-                <span class="sr-only">Открыть Твиттер</span>
-              </a>
-            </li>
-            <li class="footer__item-social">
-              <a class="footer__link-social" href="#">
-                <svg class="footer__icon-social" width="21" height="20">
-                  <use id="icon-instagram" xlink:href="images/sprite.svg#icon-instagram"></use>
-                </svg>
-                <span class="sr-only">Открыть Инстаграм</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <address class="address">
+            <ul class="address__list-contacts">
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="#">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-local" xlink:href="images/sprite.svg#icon-local"></use>
+                  </svg>
+                  ул. Т.Г.Шевченко, 1</a>
+              </li>
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="tel:380501112233">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-tel" xlink:href="images/sprite.svg#icon-tel"></use>
+                  </svg>
+                  380501112233</a>
+              </li>
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="mailto:support@sfood.com">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-message" xlink:href="images/sprite.svg#icon-message"></use>
+                  </svg>
+                  support@sfood.com</a>
+              </li>
+            </ul>
+            <ul class="address__list-social">
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-facebook" xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Фейсбук</span>
+                </a>
+              </li>
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-twitter" xlink:href="images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Твиттер</span>
+                </a>
+              </li>
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-instagram" xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+          </address>
       </div>
     </div>
     <div class="footer__bottom">
