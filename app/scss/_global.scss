@@ -62,7 +62,7 @@ body {
   }
 }
 
-.input--interactive {
+.input--int {
   transition: box-shadow 0.5s, border-color 0, 5s;
 
   &:focus {
@@ -90,8 +90,8 @@ body {
 
   &:focus,
   &:active {
-    border-radius: 5px;
     border-bottom-color: transparent;
+    border-radius: 5px;
   }
 
   &:focus {
@@ -153,25 +153,25 @@ body {
     color: $accent;
     background-color: $active;
   }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    padding: 11px 38px;
+    font-weight: 500;
+    font-size: 14px;
+    width: 100%;
+
+    &:focus .icon-svg,
+    &:hover .icon-svg,
+    &:active .icon-svg {
+      fill: #FF6838;
+    }
+  }
 }
 
-.button--icon {
-  display: flex;
-  align-items: center;
-  padding: 11px 38px;
-  font-weight: 500;
-  font-size: 14px;
-  width: 100%;
-
-  &-svg {
-    margin-right: 11px;
-    fill: $white;
-    transition: fill 0.5s;
-  }
-
-  &:focus .button--icon-svg,
-  &:hover .button--icon-svg,
-  &:active .button--icon-svg {
-    fill: #FF6838;
-  }
+.icon-svg {
+  margin-right: 11px;
+  fill: $white;
+  transition: fill 0.5s;
 }

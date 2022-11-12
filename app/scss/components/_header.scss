@@ -33,7 +33,13 @@
 }
 
 .user-nav {
-  display: flex;
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 15px;
+  }
 
   &__btn {
     display: flex;
@@ -44,10 +50,6 @@
     border-radius: 5px;
     position: relative;
     transition: background-color 0.5s, box-shadow 0.5s, background-image 0.5s;
-
-    & + .user-nav__btn {
-      margin-left: 15px;
-    }
 
     &:focus {
       background-color: $focus;
