@@ -1,0 +1,86 @@
+.restaurant {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: $white;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
+  }
+
+  &__content {
+    padding: 15px 20px 20px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__time {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 22px;
+      margin-right: 12px;
+    }
+
+    &::before {
+      background-image: url('../images/icons/icon-alarm.svg');
+    }
+  }
+
+  &__link-icon {
+    padding: 2px 33px;
+    background-color: $accent;
+    border-radius: 20px;
+    transition: box-shadow 0.5s, background-color 0.5s;
+
+    &:hover {
+      box-shadow: 0px 0px 0px 2px $focus-2;
+      background-color: $white;
+
+      .restaurant__icon {
+        fill: $accent;
+        transform: translateX(20px);
+      }
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px $focus-2;
+      background-color: $active;
+
+      .restaurant__icon {
+        fill: $accent;
+        transform: translateX(0);
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &__icon {
+    fill: $white;
+    transition: fill 0.5s, transform 0.7s;
+  }
+}

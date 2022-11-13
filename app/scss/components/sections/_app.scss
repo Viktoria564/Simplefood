@@ -1,0 +1,45 @@
+.app {
+  padding-bottom: 120px;
+
+  &__inner {
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    height: 380px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 540px;
+    height: 298px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 40px;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    &--appstore {
+      width: 120px;
+    }
+
+    &--googleplay {
+      width: 135px;
+    }
+  }
+}

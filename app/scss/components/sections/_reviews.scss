@@ -1,0 +1,162 @@
+.reviews {
+  padding-bottom: 131px;
+
+  &__title {
+    margin-bottom: 45px;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 47px;
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__icon {
+    fill: $dop;
+    transition: fill 0.5s;
+  }
+}
+
+.blockquote {
+  max-width: 570px;
+
+  &__text {
+    font-style: italic;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::before {
+      background-image: url('../images/icons/icon-quotes.svg');
+      top: 0;
+      left: -40px;
+    }
+
+    &::after {
+      background-image: url('../images/icons/icon-quotes.svg');
+      bottom: 0;
+      right: -40px;
+      transform: scale(-1, 1);
+    }
+  }
+
+  &__author {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    color: $accent;
+    margin-bottom: 8px;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+
+  li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  button {
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: $dop;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: box-shadow 0.5s, background-color 0.5s;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px $accent;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 0px 2px rgba(255, 122, 80, 0.7);
+      background-color: $active;
+    }
+
+    &:active {
+      background-color: #FFAE94;
+    }
+  }
+}
+
+.slick-active button {
+  background-color: $accent;
+}
+
+.slick-arrow {
+  position: absolute;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  background-color: transparent;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 3px solid $dop;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.5s, border-color 0.5s, background-color 0.5s;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $focus-2;
+  }
+
+  &:hover {
+    border-color: #FFAE94;
+    background-color: $active;
+
+    .reviews__icon {
+      fill: #FFAE94;
+    }
+  }
+
+  &:active {
+    border-color: $active;
+    background-color: $active;
+
+    .reviews__icon {
+      fill: #FF7A50;
+    }
+  }
+}
+
+.slick-prev {
+  bottom: -10px;
+  right: calc(50% + 76px);
+}
+
+.slick-next {
+  bottom: -10px;
+  left: calc(50% + 71px);
+  transform: scale(-1, 1);
+}
