@@ -29,6 +29,20 @@
     background-position: center;
     background-size: contain;
     height: 40px;
+    border-radius: 5px;
+    transition: box-shadow 0.5s, opacity 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px $focus-2;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
 
     &:not(:last-child) {
       margin-right: 25px;
