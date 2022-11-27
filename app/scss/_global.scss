@@ -106,6 +106,10 @@ body {
   &:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   }
+
+  @media screen and (max-width: $sm) {
+    font-size: 16px;
+  }
 }
 
 .title {
@@ -113,6 +117,14 @@ body {
   font-size: 36px;
   line-height: 1.3;
   color: $title;
+
+  @media screen and (max-width: $md) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: $sm) {
+    font-size: 24px;
+  }
 }
 
 .sr-only {

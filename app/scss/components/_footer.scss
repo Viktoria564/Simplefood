@@ -3,10 +3,19 @@
     display: flex;
     padding-bottom: 60px;
     line-height: 1.3;
+
+    @media screen and (max-width: $lg) {
+      padding-bottom: 40px;
+      flex-flow: wrap;
+    }
   }
 
   &__top-item {
     max-width: 200px;
+
+    @media screen and (max-width: $lg) {
+      margin-bottom: 30px;
+    }
 
     &:not(:last-child) {
       margin-right: 70px;
@@ -23,15 +32,37 @@
     grid-template-columns: 153px 89px 187px;
     grid-column-gap: 70px;
     margin-right: 73px;
+
+    @media screen and (max-width: $xl) {
+      grid-template-columns: 187px 150px;
+    }
+
+    @media screen and (max-width: $lg) {
+      order: 1;
+    }
+
+    @media screen and (max-width: $sm) {
+      grid-template-columns: 200px;
+      grid-column-gap: 0;
+    }
   }
 
   &__link {
     font-size: 18px;
+
+    @media screen and (max-width: $xl) {
+      padding: 10px 0;
+      display: block;
+    }
   }
 
   &__bottom {
     padding: 30px 0;
     border-top: 1px solid rgba(194, 194, 194, 0.2);
+
+    @media screen and (max-width: $sm) {
+      padding: 20px 0;
+    }
   }
 
   &__bottom-text {
@@ -60,12 +91,25 @@
 }
 
 .address {
+
+  @media screen and (max-width: $lg) {
+    margin-bottom: 30px;
+  }
+
   &__list-contacts {
     margin-bottom: 15px;
+
+    @media screen and (max-width: $xl) {
+      margin-bottom: 8px;
+    }
   }
 
   &__item-contacts:not(:last-child) {
     margin-bottom: 15px;
+
+    @media screen and (max-width: $xl) {
+      margin-bottom: 0;
+    }
   }
 
   &__link-contacts {
@@ -76,6 +120,10 @@
     line-height: 2;
     border-radius: 5px;
     transition: background-color 0.5s, box-shadow 0.5s, color 0.5s, text-shadow 0.5s;
+
+    @media screen and (max-width: $xl) {
+      padding: 7px 0;
+    }
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.01);

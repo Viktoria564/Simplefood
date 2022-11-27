@@ -11,24 +11,85 @@
 </head>
 <body>
 
-<header class="header">
+<header class="header" id="header">
   <div class="container">
     <div class="header__inner">
       <nav class="menu">
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.svg" alt="Логотип Симплфуд" width="200" height="39">
         </a>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link link" href="#">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link link" href="#">Блюда</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link link" href="#">Контакты</a>
-          </li>
-        </ul>
+        <div class="menu__box">
+          <div class="menu__box-item">
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/logo.svg" alt="Логотип Симплфуд" width="200" height="39">
+            </a>
+            <button class="menu__box-btn" type="button">
+              <span class="menu__box-line"></span>
+            </button>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link link active" href="#hero">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="#categories">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="#footer">Контакты</a>
+            </li>
+          </ul>
+          <address class="address">
+            <ul class="address__list-contacts">
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="#">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-local" xlink:href="images/sprite.svg#icon-local"></use>
+                  </svg>
+                  ул. Т.Г.Шевченко, 1</a>
+              </li>
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="tel:380501112233">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-tel" xlink:href="images/sprite.svg#icon-tel"></use>
+                  </svg>
+                  380501112233</a>
+              </li>
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="mailto:support@sfood.com">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-message" xlink:href="images/sprite.svg#icon-message"></use>
+                  </svg>
+                  support@sfood.com</a>
+              </li>
+            </ul>
+            <ul class="address__list-social">
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-facebook" xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Фейсбук</span>
+                </a>
+              </li>
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-twitter" xlink:href="images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Твиттер</span>
+                </a>
+              </li>
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-instagram" xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </nav>
 
       <div class="user-nav">
@@ -51,6 +112,10 @@
             </button>
           </li>
         </ul>
+        <button class="user-nav__button" type="button">
+          <span class="user-nav__line"></span>
+          <span class="sr-only">Открыть меню</span>
+        </button>
         <form class="search-form">
           <label class="search-form__label">
             <span class="sr-only">Введите название товара</span>
@@ -67,7 +132,7 @@
 
 <main class="main">
   <h1 class="sr-only">Доставка еды - Симпл Фуд</h1>
-<section class="hero">
+<section class="hero" id="hero">
   <div class="container">
     <div class="hero__inner" style="background-image: url(images/guy-scooter.png);">
       <div class="hero__content">
@@ -86,7 +151,7 @@
     </div>
   </div>
 </section>
-  <section class="categories">
+  <section class="categories" id="categories">
   <div class="container">
     <h2 class="categories__title title">
       Популярные категории
@@ -94,7 +159,7 @@
     <ul class="categories__buttons">
       <li class="categories__item">
         <button class="categories__btn" data-filter="all" type="button">
-          <svg class="categories__icon" width="44" height="39">
+          <svg class="categories__icon" width="44" height="44">
             <use id="icon-burger" xlink:href="images/sprite.svg#icon-burger"></use>
           </svg>
           Бургеры
@@ -117,7 +182,7 @@
         </button>
       </li>
       <li class="categories__item">
-        <button class="categories__btn" data-filter=".category-c" type="button">
+        <button class="categories__btn categories__btn--size" data-filter=".category-c" type="button">
           <svg class="categories__icon" width="44" height="44">
             <use id="icon-asia" xlink:href="images/sprite.svg#icon-asia"></use>
           </svg>
@@ -326,115 +391,115 @@
     <h2 class="restaurants__title title">
       Лучшие рестораны
     </h2>
-    <ul class="restaurants__list">
-      <li class="restaurants__item">
-        <article class="restaurant">
-          <img class="restaurant__img" src="images/restaurants/restaurant-1.jpg" alt="Блейз Пицца" width="370"
-            height="300">
-          <div class="restaurant__content">
-            <h4 class="restaurant__title">Blaze Pizza</h4>
-            <div class="restaurant__box">
-              <span class="restaurant__time">11:00 - 22:00</span>
-              <a class="restaurant__link-icon" href="#">
-                <span class="sr-only">Перейти на страницу ресторана</span>
-                <svg class="restaurant__icon" width="14" height="13">
-                  <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
-                </svg>
-              </a>
+      <ul class="restaurants__list">
+        <li class="restaurants__item">
+          <article class="restaurant">
+            <img class="restaurant__img" src="images/restaurants/restaurant-1.jpg" alt="Блейз Пицца" width="370"
+              height="300">
+            <div class="restaurant__content">
+              <h4 class="restaurant__title">Blaze Pizza</h4>
+              <div class="restaurant__box">
+                <span class="restaurant__time">11:00 - 22:00</span>
+                <a class="restaurant__link-icon" href="#">
+                  <span class="sr-only">Перейти на страницу ресторана</span>
+                  <svg class="restaurant__icon" width="14" height="13">
+                    <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li class="restaurants__item">
-        <article class="restaurant">
-          <img class="restaurant__img" src="images/restaurants/restaurant-2.jpg" alt="Пицца Ранчо" width="370"
-            height="300">
-          <div class="restaurant__content">
-            <h4 class="restaurant__title">Pizza Runcho</h4>
-            <div class="restaurant__box">
-              <span class="restaurant__time">12:00 - 21:00</span>
-              <a class="restaurant__link-icon" href="#">
-                <span class="sr-only">Перейти на страницу ресторана</span>
-                <svg class="restaurant__icon" width="14" height="12">
-                  <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
-                </svg>
-              </a>
+          </article>
+        </li>
+        <li class="restaurants__item">
+          <article class="restaurant">
+            <img class="restaurant__img" src="images/restaurants/restaurant-2.jpg" alt="Пицца Ранчо" width="370"
+              height="300">
+            <div class="restaurant__content">
+              <h4 class="restaurant__title">Pizza Runcho</h4>
+              <div class="restaurant__box">
+                <span class="restaurant__time">12:00 - 21:00</span>
+                <a class="restaurant__link-icon" href="#">
+                  <span class="sr-only">Перейти на страницу ресторана</span>
+                  <svg class="restaurant__icon" width="14" height="12">
+                    <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li class="restaurants__item">
-        <article class="restaurant">
-          <img class="restaurant__img" src="images/restaurants/restaurant-3.jpg" alt="Пицца Хат" width="370"
-            height="300">
-          <div class="restaurant__content">
-            <h4 class="restaurant__title">Pizza Hut</h4>
-            <div class="restaurant__box">
-              <span class="restaurant__time">11:00 - 22:00</span>
-              <a class="restaurant__link-icon" href="#">
-                <span class="sr-only">Перейти на страницу ресторана</span>
-                <svg class="restaurant__icon" width="14" height="12">
-                  <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
-                </svg>
-              </a>
+          </article>
+        </li>
+        <li class="restaurants__item">
+          <article class="restaurant">
+            <img class="restaurant__img" src="images/restaurants/restaurant-3.jpg" alt="Пицца Хат" width="370"
+              height="300">
+            <div class="restaurant__content">
+              <h4 class="restaurant__title">Pizza Hut</h4>
+              <div class="restaurant__box">
+                <span class="restaurant__time">11:00 - 22:00</span>
+                <a class="restaurant__link-icon" href="#">
+                  <span class="sr-only">Перейти на страницу ресторана</span>
+                  <svg class="restaurant__icon" width="14" height="12">
+                    <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li class="restaurants__item">
-        <article class="restaurant">
-          <img class="restaurant__img" src="images/restaurants/restaurant-4.jpg" alt="Мак Дональдс" width="370"
-            height="300">
-          <div class="restaurant__content">
-            <h4 class="restaurant__title">McDonald`s</h4>
-            <div class="restaurant__box">
-              <span class="restaurant__time">06:00 - 23:00</span>
-              <a class="restaurant__link-icon" href="#">
-                <span class="sr-only">Перейти на страницу ресторана</span>
-                <svg class="restaurant__icon" width="14" height="12">
-                  <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
-                </svg>
-              </a>
+          </article>
+        </li>
+        <li class="restaurants__item">
+          <article class="restaurant">
+            <img class="restaurant__img" src="images/restaurants/restaurant-4.jpg" alt="Мак Дональдс" width="370"
+              height="300">
+            <div class="restaurant__content">
+              <h4 class="restaurant__title">McDonald`s</h4>
+              <div class="restaurant__box">
+                <span class="restaurant__time">06:00 - 23:00</span>
+                <a class="restaurant__link-icon" href="#">
+                  <span class="sr-only">Перейти на страницу ресторана</span>
+                  <svg class="restaurant__icon" width="14" height="12">
+                    <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li class="restaurants__item">
-        <article class="restaurant">
-          <img class="restaurant__img" src="images/restaurants/restaurant-5.jpg" alt="КФС" width="370" height="300">
-          <div class="restaurant__content">
-            <h4 class="restaurant__title">KFC</h4>
-            <div class="restaurant__box">
-              <span class="restaurant__time">06:00 - 23:30</span>
-              <a class="restaurant__link-icon" href="#">
-                <span class="sr-only">Перейти на страницу ресторана</span>
-                <svg class="restaurant__icon" width="14" height="12">
-                  <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
-                </svg>
-              </a>
+          </article>
+        </li>
+        <li class="restaurants__item">
+          <article class="restaurant">
+            <img class="restaurant__img" src="images/restaurants/restaurant-5.jpg" alt="КФС" width="370" height="300">
+            <div class="restaurant__content">
+              <h4 class="restaurant__title">KFC</h4>
+              <div class="restaurant__box">
+                <span class="restaurant__time">06:00 - 23:30</span>
+                <a class="restaurant__link-icon" href="#">
+                  <span class="sr-only">Перейти на страницу ресторана</span>
+                  <svg class="restaurant__icon" width="14" height="12">
+                    <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li class="restaurants__item">
-        <article class="restaurant">
-          <img class="restaurant__img" src="images/restaurants/restaurant-6.jpg" alt="Стар Бургер" width="370"
-            height="300">
-          <div class="restaurant__content">
-            <h4 class="restaurant__title">Star Burgers</h4>
-            <div class="restaurant__box">
-              <span class="restaurant__time">09:00 - 21:00</span>
-              <a class="restaurant__link-icon" href="#">
-                <span class="sr-only">Перейти на страницу ресторана</span>
-                <svg class="restaurant__icon" width="14" height="12">
-                  <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
-                </svg>
-              </a>
+          </article>
+        </li>
+        <li class="restaurants__item">
+          <article class="restaurant">
+            <img class="restaurant__img" src="images/restaurants/restaurant-6.jpg" alt="Стар Бургер" width="370"
+              height="300">
+            <div class="restaurant__content">
+              <h4 class="restaurant__title">Star Burgers</h4>
+              <div class="restaurant__box">
+                <span class="restaurant__time">09:00 - 21:00</span>
+                <a class="restaurant__link-icon" href="#">
+                  <span class="sr-only">Перейти на страницу ресторана</span>
+                  <svg class="restaurant__icon" width="14" height="12">
+                    <use id="icon-arrow-white" xlink:href="images/sprite.svg#icon-arrow-white"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-    </ul>
+          </article>
+        </li>
+      </ul>
   </div>
 </section>
   <section class="reviews">
@@ -512,7 +577,7 @@
 </section>
   <section class="app">
   <div class="container">
-    <div class="app__inner" style="background-image: url(images/app-bg.jpg);">
+    <div class="app__inner">
       <div class="app__content">
         <h2 class="app__title title">Скачайте мобильное приложение</h2>
         <p class="app__text">
@@ -530,11 +595,11 @@
 
 </main>
 
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="container">
     <div class="footer__top">
       <div class="footer__top-item">
-        <a class="logo footer__logo" href="#">
+        <a class="logo footer__logo" href="#header">
           <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="39">
         </a>
         <form class="form-subscribe">
