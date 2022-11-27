@@ -1,0 +1,9 @@
+.products {
+  padding-bottom: 120px;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+}

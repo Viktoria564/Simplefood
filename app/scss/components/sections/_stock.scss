@@ -1,0 +1,19 @@
+.stock {
+  padding-bottom: 120px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+
+    .restaurant__content {
+      padding: 15px 20px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
