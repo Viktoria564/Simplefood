@@ -1,6 +1,10 @@
 .hero {
   padding: 60px 0 123px;
 
+  @media screen and (max-width: $xl) {
+    padding-bottom: 80px;
+  }
+
   @media screen and (max-width: $md) {
     padding: 25px 0 40px;
   }

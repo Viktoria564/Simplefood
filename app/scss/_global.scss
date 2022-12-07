@@ -179,6 +179,12 @@ body {
     &:active .icon-svg {
       fill: #FF6838;
     }
+
+    &:focus .description__button-svg,
+    &:hover .description__button-svg,
+    &:active .description__button-svg {
+      stroke: #FF6838;
+    }
   }
 }
 

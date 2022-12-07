@@ -1,7 +1,7 @@
 .header {
   padding-top: 60px;
 
-  @media screen and (max-width: $lg) {
+  @media screen and (max-width: $md) {
     padding-top: 25px;
   }
 
@@ -93,7 +93,7 @@
   &__box-line {
     @media screen and (max-width: $xl) {
       display: block;
-      width: 30px;
+      width: 24px;
       height: 2px;
       background-color: $title;
       transform: rotate(45deg);
@@ -102,7 +102,7 @@
       &::before {
         content: '';
         position: absolute;
-        width: 30px;
+        width: 24px;
         height: 2px;
         background-color: $title;
         left: 0;
@@ -308,15 +308,19 @@
 .search-form {
   display: flex;
   position: absolute;
-  right: 30px;
+  right: 11%;
   top: 120px;
   font-size: 14px;
   transform: translateY(-400%);
   z-index: 1;
   transition: transform 1s;
 
-  @media screen and (max-width: $lg) {
-    top: 85px;
+  @media screen and (max-width: $xl) {
+    right: 5%;
+  }
+
+  @media screen and (max-width: $md) {
+    top: 70px;
   }
 
   @media screen and (max-width: $mn) {

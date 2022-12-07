@@ -23,6 +23,12 @@
     box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
   }
 
+  &__link {
+    height: 226px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   &__img {
     margin: 0 auto 10px;

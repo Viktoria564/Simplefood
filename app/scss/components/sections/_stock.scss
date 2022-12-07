@@ -1,15 +1,45 @@
 .stock {
   padding-bottom: 120px;
 
+  @media screen and (max-width: $xl) {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 48px;
+  }
+
   &__title {
     margin-bottom: 60px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
     display: flex;
 
+    @media screen and (max-width: $xl) {
+      flex-wrap: wrap;
+      grid-row-gap: 30px;
+    }
+
     .restaurant__content {
       padding: 15px 20px;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .restaurant {
+      @media screen and (max-width: $md) {
+        margin: 0 auto 52px;
+      }
     }
   }
 

@@ -1,6 +1,10 @@
 .app {
   padding-bottom: 120px;
 
+  @media screen and (max-width: $xl) {
+    padding-bottom: 80px;
+  }
+
   @media screen and (max-width: $md) {
     padding-bottom: 40px;
   }
