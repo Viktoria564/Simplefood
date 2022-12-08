@@ -1,0 +1,50 @@
+.interests {
+  padding-bottom: 120px;
+
+  @media screen and (max-width: $xl) {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    text-align: center;
+
+    .product {
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    padding: 1px;
+  }
+
+  .slick-arrow {
+    top: -104px;
+    right: 0;
+    bottom: 0;
+  }
+
+  .slick-next {
+    left: auto;
+    transform: scale(-1, 1);
+  }
+
+  .slick-prev {
+    right: 63px;
+  }
+
+  .slick-dots {
+    margin-top: 15px;
+  }
+}

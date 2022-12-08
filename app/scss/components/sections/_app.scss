@@ -1,0 +1,107 @@
+.app {
+  padding-bottom: 120px;
+
+  @media screen and (max-width: $xl) {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 40px;
+  }
+
+  &__inner {
+    background-image: url('../images/app-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    height: 380px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $xl) {
+      height: auto;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 380px;
+      display: none;
+      position: absolute;
+      background-color: rgba(249, 250, 255, 0.85);
+      z-index: 0;
+
+      @media screen and (max-width: $xl) {
+        display: block;
+      }
+
+      @media screen and (max-width: $md) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $md) {
+      background: none;
+    }
+  }
+
+  &__content {
+    max-width: 540px;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 40px;
+    border-radius: 5px;
+    transition: box-shadow 0.5s, opacity 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px $focus-2;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    &--appstore {
+      width: 120px;
+    }
+
+    &--googleplay {
+      width: 135px;
+    }
+  }
+}

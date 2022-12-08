@@ -1,9 +1,25 @@
-@import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
+@import 'vars';
 @import 'global';
 
+@import './components/header';
+@import './components/footer';
 
+@import './components/sections/hero';
+@import './components/product';
+@import './components/sections/categories';
+@import './components/sections/about';
+@import './components/sections/restaurants';
+@import './components/restaurant';
+@import './components/sections/reviews';
+@import './components/sections/app';
 
+@import './components/sections/products';
+@import './components/sections/breadcrumbs-catalog';
+@import './components/sections/stock';
 
-@import 'media'
+@import './components/sections/description';
+@import './components/sections/interests';
+

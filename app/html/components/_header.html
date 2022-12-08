@@ -1,0 +1,119 @@
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <nav class="menu">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип Симплфуд" width="200" height="39">
+        </a>
+        <div class="menu__box">
+          <div class="menu__box-item">
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/logo.svg" alt="Логотип Симплфуд" width="200" height="39">
+            </a>
+            <button class="menu__box-btn" type="button">
+              <span class="menu__box-line"></span>
+              <span class="sr-only">Закрыть меню</span>
+            </button>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link link active" href="#hero">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="#categories, #product">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="#footer">Контакты</a>
+            </li>
+          </ul>
+          <address class="address">
+            <ul class="address__list-contacts">
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="#">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-local" xlink:href="images/sprite.svg#icon-local"></use>
+                  </svg>
+                  ул. Т.Г.Шевченко, 1</a>
+              </li>
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="tel:380501112233">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-tel" xlink:href="images/sprite.svg#icon-tel"></use>
+                  </svg>
+                  380501112233</a>
+              </li>
+              <li class="address__item-contacts">
+                <a class="address__link-contacts" href="mailto:support@sfood.com">
+                  <svg class="address__icon" width="20" height="19">
+                    <use id="icon-message" xlink:href="images/sprite.svg#icon-message"></use>
+                  </svg>
+                  support@sfood.com</a>
+              </li>
+            </ul>
+            <ul class="address__list-social">
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-facebook" xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Фейсбук</span>
+                </a>
+              </li>
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-twitter" xlink:href="images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Твиттер</span>
+                </a>
+              </li>
+              <li class="address__item-social">
+                <a class="address__link-social" href="#">
+                  <svg class="address__icon-social" width="21" height="20">
+                    <use id="icon-instagram" xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <span class="sr-only">Открыть Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </nav>
+
+      <div class="user-nav">
+        <ul class="user-nav__list">
+          <li class="user-nav__item">
+            <button class="user-nav__btn user-nav__btn-search" type="button">
+              <svg class="user-nav__icon" width="21" height="22">
+                <use id="icon-search" xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="sr-only">Открыть форму для поиска</span>
+            </button>
+          </li>
+          <li class="user-nav__item">
+            <button class="user-nav__btn" type="button">
+              <svg class="user-nav__icon" width="21" height="20">
+                <use id="icon-cart" xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="user-nav__num">4</span>
+              <span class="sr-only">Открыть корзину</span>
+            </button>
+          </li>
+        </ul>
+        <button class="user-nav__button" type="button">
+          <span class="user-nav__line"></span>
+          <span class="sr-only">Открыть меню</span>
+        </button>
+        <form class="search-form">
+          <label class="search-form__label">
+            <span class="sr-only">Введите название товара</span>
+            <input class="search-form__input input--int" type="search" placeholder="Поиск..." name="search" required>
+          </label>
+          <button class="search-form__btn button" type="submit">
+            Поиск
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
