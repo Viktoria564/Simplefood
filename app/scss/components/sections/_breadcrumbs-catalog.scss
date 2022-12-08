@@ -1,0 +1,48 @@
+.top {
+  padding: 50px 0 63px;
+
+  @media screen and (max-width: $md) {
+    padding: 25px 0 40px;
+  }
+
+  &__container {
+    background-color: $focus;
+    padding: 18px 0;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+
+  &__item--none {
+    @media screen and (max-width: $sm) {
+      display: none;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5px;
+
+    &::after {
+      content: '';
+      background-image: url('../images/icons/icon-chevron.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 6px;
+      height: 10px;
+      display: inline-block;
+      margin-left: 3px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #505050;
+
+    &.breadcrumbs__link--active {
+      text-decoration: underline;
+    }
+  }
+}
